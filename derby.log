@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Jun 04 12:58:06 BRT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-73d3-e692-000003d47e30 
+on database directory /home/matheus/20170524-Java-Persistencia-Etapa05/20170516_atividade with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/home/matheus/20170524-Java-Persistencia-Etapa05/libs/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=/home/matheus/20170524-Java-Persistencia-Etapa05
+os.name=Linux
+os.arch=amd64
+os.version=4.8.0-52-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
