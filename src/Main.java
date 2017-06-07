@@ -60,7 +60,7 @@ public class Main {
 		pessoas.add(pessoa);
 		atividade.setPessoas(pessoas);
 		em.persist(atividade);
-		em.flush();
+		em.flush(); 
 
 		em.getTransaction().commit();
 		em.close();

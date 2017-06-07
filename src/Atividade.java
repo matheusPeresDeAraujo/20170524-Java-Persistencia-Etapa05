@@ -34,7 +34,8 @@ public class Atividade {
 	
 	private int duracao;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "etapa_id", nullable=false)
 	private Etapa etapa;
 	
 	@ManyToMany(cascade = CascadeType.ALL)

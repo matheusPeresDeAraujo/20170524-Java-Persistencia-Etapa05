@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -25,10 +27,11 @@ public class Etapa {
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "projeto_id", nullable=false)
 	private Projeto projeto;
-	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "atividade_id", nullable=false)
-	private Atividade atividade;
+
+	@OneToMany(mappedBy = "etapa", 
+			 cascade = CascadeType.ALL, 
+			 orphanRemoval = true)
+	private List<Atividade> atividades = new ArrayList<>();
 
 	public Etapa(String nome, Date inicioPrevisto, Date terminoPrevisto, Projeto projeto) {
 		super();
@@ -41,6 +44,14 @@ public class Etapa {
 	public Etapa() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public List<Atividade> getAtividades() {
+		return atividades;
+	}
+
+	public void setAtividades(List<Atividade> atividades) {
+		this.atividades = atividades;
 	}
 
 	public long getId(){

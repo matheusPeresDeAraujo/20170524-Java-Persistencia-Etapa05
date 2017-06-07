@@ -38,7 +38,7 @@ public class Pessoa {
 	
 	private Documento documento;
 	
-	@ManyToMany(mappedBy = "pessoa")
+	@ManyToMany(mappedBy = "pessoas")
 	private List<Atividade> atividades = new ArrayList<>();
 
 	public Pessoa(String matricula, String nome, Date nascimento, char sexo, String telefone, String ramal) {
